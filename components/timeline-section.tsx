@@ -7,37 +7,37 @@ const timelineEvents = [
   {
     title: "Registrations Open",
     description: "Sign up on Devfolio and form your team",
-    date: "January 15, 2025",
+    date: "January 14, 2026",
     status: "completed",
   },
-  {
-    title: "Idea Submission",
-    description: "Submit your innovative project ideas",
-    date: "February 1, 2025",
-    status: "upcoming",
-  },
+  // {
+  //   title: "Idea Submission",
+  //   description: "Submit your innovative project ideas",
+  //   date: "February , 2025",
+  //   status: "upcoming",
+  // },
   {
     title: "Shortlisting",
     description: "Selected teams announced for the hackathon",
-    date: "February 15, 2025",
+    date: "January 25, 2026",
     status: "upcoming",
   },
   {
     title: "Day 1: Kickoff + Build",
     description: "Opening ceremony, team onboarding, and start building",
-    date: "March 1, 2025",
+    date: "February 6, 2026",
     status: "upcoming",
   },
   {
     title: "Day 2: Build + Mentorship",
     description: "Continue building with expert mentor sessions",
-    date: "March 2, 2025",
+    date: "February 7, 2026",
     status: "upcoming",
   },
   {
     title: "Day 3: Presentations + Results",
     description: "Final pitches, judging, and winner announcements",
-    date: "March 3, 2025",
+    date: "February 8, 2026",
     status: "upcoming",
   },
 ]

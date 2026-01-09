@@ -14,7 +14,7 @@ const tracks = [
     icon: Cpu,
     title: "Embedded Systems",
     description: "Microcontrollers, firmware development, and real-time systems",
-    color: "accent",
+    color: "primary",
   },
   {
     icon: Wifi,
@@ -26,7 +26,7 @@ const tracks = [
     icon: Link2,
     title: "Blockchain & Web3",
     description: "Decentralized applications, smart contracts, and crypto solutions",
-    color: "accent",
+    color: "primary",
   },
   {
     icon: Building2,

@@ -70,7 +70,7 @@ export function SponsorsSection() {
 
         <motion.div className="text-center mt-16" initial="hidden" whileInView="visible" variants={itemVariants} viewport={{}}>
           <p className="text-muted-foreground mb-4">Interested in sponsoring REKKATHON?</p>
-          <a href="mailto:sponsor@rekkathon.in" className="text-primary hover:underline font-medium">
+          <a href="mailto:vibhav.nimbus@nith.ac.in" className="text-primary hover:underline font-medium">
             Get in touch →
           </a>
         </motion.div>

@@ -18,7 +18,7 @@ export function Footer() {
               <span className="text-xl font-bold text-accent m-0 p-0">THON</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Organized by <span className="text-primary">Team Vibhav</span> | NIT Hamirpur
+              Organized by <a href="https://vibhav-2k23.vercel.app/" target="_blank" className="text-primary">Team Vibhav</a> | NIT Hamirpur
             </p>
           </div>
 
