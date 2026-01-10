@@ -104,7 +104,7 @@ export function HeroSection() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             >
               <div
-                class="apply-button"
+                className="apply-button"
                 data-hackathon-slug="rekkathon"
                 data-button-theme="dark-inverted"
                 style="height: 44px; width: 312px"

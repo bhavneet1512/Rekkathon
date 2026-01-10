@@ -8,9 +8,9 @@ const titleSponsor = {
 }
 
 const trackSponsors = [
-  { name: "Track Sponsor 1", placeholder: "Sponsor Logo" },
-  { name: "Track Sponsor 2", placeholder: "Sponsor Logo" },
-  { name: "Track Sponsor 3", placeholder: "Sponsor Logo" },
+  { name: "Gold Sponsor 1", placeholder: "Sponsor Logo", src: "/devfolio.png", alt: "Devfolio Logo" },
+  { name: "Gold Sponsor 2", placeholder: "Sponsor Logo", src: "", alt: "Sponsor Logo" },
+  { name: "Gold Sponsor 3", placeholder: "Sponsor Logo", src: "", alt: "Sponsor Logo" },
 ]
 
 const communityPartners = [
@@ -47,11 +47,15 @@ export function SponsorsSection() {
         </motion.div>
 
         <motion.div className="mb-16" initial="hidden" whileInView="visible" variants={containerVariants} viewport={{}}>
-          <h4 className="text-sm font-mono text-muted-foreground uppercase tracking-widest text-center mb-6">Track Sponsors</h4>
+          <h4 className="text-sm font-mono text-muted-foreground uppercase tracking-widest text-center mb-6">Gold Sponsors</h4>
           <div className="flex flex-wrap justify-center gap-6">
             {trackSponsors.map((sponsor, index) => (
               <motion.div key={index} className="w-48 h-24 bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent/50 transition-colors" variants={cardVariants} whileHover="hover">
-                <span className="text-primary font-semibold text-xs">Coming Soon</span>
+                {sponsor.src ? (
+                  <img src={sponsor.src} alt={sponsor.alt} className="max-w-full max-h-full object-contain p-1" />
+                ) : (
+                  <span className="text-primary font-semibold text-xs">Coming Soon</span>
+                )}
               </motion.div>
             ))}
           </div>
