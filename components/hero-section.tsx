@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ChevronDown, Cpu } from "lucide-react"
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { ChevronDown, Cpu } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   const containerVariants = {
@@ -14,7 +14,7 @@ export function HeroSection() {
         delayChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -23,7 +23,7 @@ export function HeroSection() {
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" },
     },
-  }
+  };
 
   const iconVariants = {
     hidden: { opacity: 0, scale: 0 },
@@ -33,14 +33,14 @@ export function HeroSection() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
     hover: { scale: 1.1, transition: { duration: 0.3 } },
-  }
+  };
 
   const scrollVariants = {
     animate: {
       y: [0, 10, 0],
       transition: { duration: 2, repeat: Infinity },
     },
-  }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
@@ -85,7 +85,10 @@ export function HeroSection() {
         </motion.p>
 
         {/* Organizer */}
-        <motion.p className="text-sm text-muted-foreground mb-12" variants={itemVariants}>
+        <motion.p
+          className="text-sm text-muted-foreground mb-12"
+          variants={itemVariants}
+        >
           <span className="text-primary">Team Vibhav</span> | NIT Hamirpur
         </motion.p>
 
@@ -100,9 +103,12 @@ export function HeroSection() {
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             >
-              <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">
-                Register on Devfolio
-              </a>
+              <div
+                class="apply-button"
+                data-hackathon-slug="rekkathon"
+                data-button-theme="dark-inverted"
+                style="height: 44px; width: 312px"
+              ></div>
             </Button>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -134,5 +140,5 @@ export function HeroSection() {
       <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-full" />
       <div className="absolute top-1/3 right-20 w-16 h-16 border border-primary/30 rotate-45" /> */}
     </section>
-  )
+  );
 }

@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer"
 import Beams from "@/components/ui/beams"
 import BlobCursor from "@/components/ui/BlobCursor"
 import TargetCursor from "@/components/ui/TargetCursor"
+// import { RegistrationSection } from "@/components/registration-section"
 
 export default function Home() {
   return (

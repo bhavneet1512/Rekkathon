@@ -53,6 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+      </head>
       <body className={`font-sans antialiased`}>
         <SmoothScroll />
         <SmoothCursor/>

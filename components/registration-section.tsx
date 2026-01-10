@@ -1,10 +1,25 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Rocket } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function RegistrationSection() {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+    // Dynamically load Devfolio SDK for this component
+    const script = document.createElement('script')
+    script.src = 'https://apply.devfolio.co/v2/sdk.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   const containerVariants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }
   const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
   return (
@@ -20,11 +35,26 @@ export function RegistrationSection() {
           Join hundreds of developers, designers, and innovators at India&apos;s most exciting hardware + software hackathon. Register now and be part of something extraordinary.
         </motion.p>
         <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-12 py-7 shadow-lg hover:shadow-xl transition-all">
-            <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">
+          {isClient ? (
+            <div 
+              className="apply-button inline-block" 
+              data-hackathon-slug="rekkathon" 
+              data-button-theme="light"
+              style={{ height: '44px', width: '312px' }}
+            />
+          ) : (
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-12 py-7 shadow-lg hover:shadow-xl transition-all">
               Register on Devfolio
+            </Button>
+          )}
+        </motion.div>
+        <motion.div variants={itemVariants} className="mt-6">
+          <p className="text-sm text-muted-foreground">
+            Or{' '}
+            <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              register on Devfolio directly
             </a>
-          </Button>
+          </p>
         </motion.div>
         <motion.p className="text-sm text-muted-foreground mt-6" variants={itemVariants}>
           Free to participate • Team size: 2-4 members • Limited spots available
