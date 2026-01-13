@@ -49,7 +49,7 @@ export function Navbar() {
               </a>
             ))}
             <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">
+              <a href="https://rekkathon.devfolio.co/" target="_blank" rel="noopener noreferrer">
                 Register
               </a>
             </Button>

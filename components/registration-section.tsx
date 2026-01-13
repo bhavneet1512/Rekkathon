@@ -37,7 +37,7 @@ export function RegistrationSection() {
         <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           {isClient ? (
             <div 
-              className="apply-button inline-block" 
+              className="apply-button inline-block m-auto" 
               data-hackathon-slug="rekkathon" 
               data-button-theme="light"
               style={{ height: '44px', width: '312px' }}
@@ -51,7 +51,7 @@ export function RegistrationSection() {
         <motion.div variants={itemVariants} className="mt-6">
           <p className="text-sm text-muted-foreground">
             Or{' '}
-            <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            <a href="https://rekkathon.devfolio.co/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
               register on Devfolio directly
             </a>
           </p>

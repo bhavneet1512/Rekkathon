@@ -9,7 +9,7 @@ const titleSponsor = {
 
 const trackSponsors = [
   { name: "Gold Sponsor 1", placeholder: "Sponsor Logo", src: "/devfolio.png", alt: "Devfolio Logo" },
-  { name: "Gold Sponsor 2", placeholder: "Sponsor Logo", src: "", alt: "Sponsor Logo" },
+  { name: "Gold Sponsor 2", placeholder: "Sponsor Logo", src: "/ETH.png", alt: "ETH Logo" },
   { name: "Gold Sponsor 3", placeholder: "Sponsor Logo", src: "", alt: "Sponsor Logo" },
 ]
 
