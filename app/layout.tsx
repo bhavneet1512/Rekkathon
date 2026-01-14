@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description:
     "Join REKKATHON, a national-level offline hackathon organized by Team Vibhav at NIT Hamirpur. Compete, build innovative projects, and win amazing prizes. Register now!",
   keywords: [
+    "rekathon",
+    "rakathon",
     "hackathon",
     "hardware hackathon",
     "software hackathon",
@@ -111,7 +113,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
       </head>
       <body className={`font-sans antialiased`}>
         <SmoothScroll />

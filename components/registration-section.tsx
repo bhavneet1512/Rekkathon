@@ -7,19 +7,34 @@ import { motion } from "framer-motion"
 
 export function RegistrationSection() {
   const [isClient, setIsClient] = useState(false)
+  const [sdkLoaded, setSdkLoaded] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
-    // Dynamically load Devfolio SDK for this component
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
+    // Check if Devfolio SDK is already loaded
+    if (window.DFApply) {
+      setSdkLoaded(true)
+      return
+    }
+
+    // Load Devfolio SDK
     const script = document.createElement('script')
     script.src = 'https://apply.devfolio.co/v2/sdk.js'
     script.async = true
-    script.defer = true
-    document.body.appendChild(script)
-    return () => {
-      document.body.removeChild(script)
+    script.onload = () => {
+      setSdkLoaded(true)
     }
-  }, [])
+    script.onerror = () => {
+      console.error('Failed to load Devfolio SDK')
+      setSdkLoaded(false)
+    }
+    document.body.appendChild(script)
+  }, [isClient])
   const containerVariants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }
   const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }
   return (
@@ -35,7 +50,7 @@ export function RegistrationSection() {
           Join hundreds of developers, designers, and innovators at India&apos;s most exciting hardware + software hackathon. Register now and be part of something extraordinary.
         </motion.p>
         <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          {isClient ? (
+          {isClient && sdkLoaded ? (
             <div 
               className="apply-button inline-block m-auto" 
               data-hackathon-slug="rekkathon" 
