@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   keywords: [
     "rekathon",
     "rakathon",
+    "reckathon",
     "hackathon",
     "hardware hackathon",
     "software hackathon",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     "tech competition India",
   ],
   generator: "v0.app",
-  authors: [{ name: "Team Vibhav", url: "https://rekkathon.com" }],
+  authors: [{ name: "Team Vibhav", url: "https://rekkathon.vercel.app" }],
   creator: "Team Vibhav",
   publisher: "NIT Hamirpur",
   formatDetection: {
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rekkathon.com",
+    url: "https://rekkathon.vercel.app",
     siteName: "REKKATHON",
     title: "REKKATHON | National-Level Offline Hardware + Software Hackathon",
     description: "Join REKKATHON 2025 - The ultimate offline hackathon at NIT Hamirpur. Build, innovate, and compete for amazing prizes!",

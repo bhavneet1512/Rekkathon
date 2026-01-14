@@ -72,7 +72,7 @@ export function RegistrationSection() {
           </p>
         </motion.div>
         <motion.p className="text-sm text-muted-foreground mt-6" variants={itemVariants}>
-          Free to participate • Team size: 2-4 members • Limited spots available
+          Free to participate • Team size: 1-4 members • Limited spots available
         </motion.p>
       </motion.div>
     </section>
