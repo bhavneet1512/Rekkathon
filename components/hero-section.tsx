@@ -52,13 +52,13 @@ export function HeroSection() {
         animate="visible"
       >
         {/* Glowing chip icon */}
-        <motion.div
+        {/* <motion.div
           className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-card border border-border mb-8 animate-float"
           variants={iconVariants}
           whileHover="hover"
         >
           <Cpu className="w-10 h-10 text-primary" />
-        </motion.div>
+        </motion.div> */}
 
         {/* Main title */}
         <motion.h1
