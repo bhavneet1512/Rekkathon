@@ -14,7 +14,7 @@ const trackSponsors = [
 ]
 
 const communityPartners = [
-  { name: "Partner 1", placeholder: "Partner Logo" },
+  { name: "Partner 1", placeholder: "Partner Logo", src: "/eventopia.png", alt: "Eventopia Logo" },
   { name: "Partner 2", placeholder: "Partner Logo" },
   { name: "Partner 3", placeholder: "Partner Logo" },
   { name: "Partner 4", placeholder: "Partner Logo" },
@@ -66,7 +66,13 @@ export function SponsorsSection() {
           <div className="flex flex-wrap justify-center gap-4">
             {communityPartners.map((partner, index) => (
               <motion.div key={index} className="w-36 h-20 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/30 transition-colors" variants={cardVariants} whileHover="hover">
-                <span className="text-primary font-semibold text-xs">Coming Soon</span>
+                {index === 0 && partner.src ? (
+                  <a href="https://eventopia.in" target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center">
+                    <img src={partner.src} alt={partner.alt} className="max-w-full max-h-full object-contain p-1" />
+                  </a>
+                ) : (
+                  <span className="text-primary font-semibold text-xs">Coming Soon</span>
+                )}
               </motion.div>
             ))}
           </div>
