@@ -19,7 +19,7 @@ const timelineEvents = [
   {
     title: "Shortlisting",
     description: "Selected teams announced for the hackathon",
-    date: "January 25, 2026",
+    date: "January 31, 2026",
     status: "upcoming",
   },
   {

@@ -7,28 +7,28 @@ const prizes = [
   {
     icon: Trophy,
     title: "Winner",
-    amount: "₹50,000",
+    amount: "$250",
     color: "primary",
     perks: ["Cash Prize", "Internship Opportunities", "Premium Swag Kit"],
   },
   {
     icon: Medal,
     title: "First Runner-up",
-    amount: "₹30,000",
+    amount: "$150",
     color: "accent",
     perks: ["Cash Prize", "Mentorship Sessions", "Swag Kit"],
   },
   {
     icon: Award,
     title: "Second Runner-up",
-    amount: "₹20,000",
+    amount: "$100",
     color: "primary",
     perks: ["Cash Prize", "Course Vouchers", "Swag Kit"],
   },
   {
     icon: Gift,
     title: "Track Prizes",
-    amount: "₹10,000",
+    amount: "$100",
     color: "accent",
     perks: ["Per Track Winner", "Certificates", "Special Goodies"],
   },
@@ -47,7 +47,7 @@ export function PrizesSection() {
           <motion.h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6" variants={itemVariants}>Rewards & <span className="text-accent">Recognition</span></motion.h3>
           <motion.div className="inline-block p-6 bg-card border border-primary rounded-2xl mb-8" variants={poolVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} whileHover={{ scale: 1.05 }}>
             <p className="text-sm text-muted-foreground mb-2">Total Prize Pool</p>
-            <p className="text-4xl sm:text-5xl font-bold text-primary">₹1,50,000+</p>
+            <p className="text-4xl sm:text-5xl font-bold text-primary">₹1,00,000+</p>
           </motion.div>
           <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>Win amazing prizes, certificates, mentorship opportunities, and exclusive swag</motion.p>
         </motion.div>

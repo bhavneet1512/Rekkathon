@@ -2,22 +2,16 @@
 
 import { motion } from "framer-motion"
 
-const titleSponsor = {
-  name: "Title Sponsor",
-  placeholder: "Your Logo Here",
-}
 
 const trackSponsors = [
   { name: "Gold Sponsor 1", placeholder: "Sponsor Logo", src: "/devfolio.png", alt: "Devfolio Logo" },
   { name: "Gold Sponsor 2", placeholder: "Sponsor Logo", src: "/ETH.png", alt: "ETH Logo" },
-  { name: "Gold Sponsor 3", placeholder: "Sponsor Logo", src: "", alt: "Sponsor Logo" },
+  { name: "Gold Sponsor 3", placeholder: "Sponsor Logo", src: "/xyz.png", alt: ".xyz logo" },
 ]
 
 const communityPartners = [
   { name: "Partner 1", placeholder: "Partner Logo", src: "/eventopia.png", alt: "Eventopia Logo" },
-  { name: "Partner 2", placeholder: "Partner Logo" },
-  { name: "Partner 3", placeholder: "Partner Logo" },
-  { name: "Partner 4", placeholder: "Partner Logo" },
+
 ]
 
 export function SponsorsSection() {
@@ -37,17 +31,8 @@ export function SponsorsSection() {
           </motion.p>
         </motion.div>
 
-        <motion.div className="mb-16" initial="hidden" whileInView="visible" variants={itemVariants} viewport={{}}>
-          <h4 className="text-sm font-mono text-muted-foreground uppercase tracking-widest text-center mb-6">Title Sponsor</h4>
-          <div className="flex justify-center">
-            <motion.div className="w-64 h-32 bg-card border-2 border-primary/30 rounded-xl flex items-center justify-center hover:border-primary transition-colors" variants={cardVariants} whileHover="hover">
-              <span className="text-primary font-semibold text-sm">Coming Soon</span>
-            </motion.div>
-          </div>
-        </motion.div>
-
         <motion.div className="mb-16" initial="hidden" whileInView="visible" variants={containerVariants} viewport={{}}>
-          <h4 className="text-sm font-mono text-muted-foreground uppercase tracking-widest text-center mb-6">Gold Sponsors</h4>
+          <h4 className="text-sm font-mono text-muted-foreground uppercase tracking-widest text-center mb-6">Our Sponsors</h4>
           <div className="flex flex-wrap justify-center gap-6">
             {trackSponsors.map((sponsor, index) => (
               <motion.div key={index} className="w-48 h-24 bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent/50 transition-colors" variants={cardVariants} whileHover="hover">
